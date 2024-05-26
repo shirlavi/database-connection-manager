@@ -1,5 +1,7 @@
 import React, { FunctionComponent, useState, useEffect, useMemo } from 'react';
 import axios from 'axios';
+import { RouterProvider } from "react-router-dom";
+import router from "./router/router";
 
 interface IProps {}
 
@@ -43,6 +45,7 @@ const App: FunctionComponent<IProps> = () => {
       <h5 style={{ color: statusColor }}>
         {statusMessage}
       </h5>
+      <RouterProvider router={router}/>
     </div>
   );
 }
